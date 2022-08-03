@@ -1,0 +1,52 @@
+.cell {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  word-break: break-all; 
+  padding: 10px;
+
+  &.active {
+    background-color: lightblue;
+    animation: bounce 1s;
+  }
+
+  @keyframes bounce {
+    0%  { transform: scale(1.15)  }
+    20% { transform: scale(0.87)  }
+    40% { transform: scale(1.1)  }
+    60% { transform: scale(0.95)  }
+    80% { transform: scale(1.03)  }
+    100%{ transform: scale(1) }
+  }
+
+  .index {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  @media (max-width: 1199px) {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 767px) {
+    width: 70px;
+    height: 70px;
+    padding: 2px;
+    padding-top: 15px;
+    font-size: 12px;
+
+    .index {
+      top: 5px;
+      left: 5px;
+    }
+  }
+}
